@@ -1,0 +1,6 @@
+{
+  "name": "Browar Wałcz",
+  "description": "Historia · Przestrzeń · Przyszłość. Rewitalizacja historycznego browaru w Wałczu – przestrzeń dla ludzi, przedsiębiorców i inicjatyw.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

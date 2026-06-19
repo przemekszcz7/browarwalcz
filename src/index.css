@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  --color-page: #F0EEE9;
+  --color-surface: #FFFFFF;
+  --color-text: #1A1917;
+  --color-dark: #1A1917;
+  --color-charcoal: #2E2C29;
+  --color-stone: #5A5651;
+  --color-dust: #9A958E;
+  --color-rule-light: #D8D4CC;
+  --color-rule-dark: rgba(255, 255, 255, 0.08);
+  --color-orange: #FF5E00; /* Wholly brighter, brilliant industrial signal orange */
+  --color-warm-white: #F8F6F1;
+  --color-muted: #9A958E;
+
+  --font-hero: "Archivo Black", sans-serif;
+  --font-condensed: "Barlow Condensed", sans-serif;
+  --font-body: "Barlow", sans-serif;
+
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-full: 0px;
+}
+
+:root {
+  --dark: #1A1917;
+  --charcoal: #2E2C29;
+  --stone: #5A5651;
+  --dust: #9A958E;
+  --rule: #D8D4CC;
+  --page: #F0EEE9;
+  --surface: #FFFFFF;
+  --orange: #FF5E00; /* Brighter industrial signal orange */
+  --warm-white: #F8F6F1;
+  --text: #1A1917;
+  --muted: #9A958E;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--page);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar to match brutalist theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--orange);
+}
+
+/* Concrete form line grid simulation */
+.concrete-grid {
+  background-image: 
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.012) 0px, rgba(255, 255, 255, 0.012) 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.012) 0px, rgba(255, 255, 255, 0.012) 1px, transparent 1px, transparent 60px);
+}
+
+/* Smeared industrial oil & grease stains (patina) */
+.grease-smudge {
+  position: absolute;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(16, 12, 6, 0.35) 0%, rgba(16, 12, 6, 0.18) 35%, rgba(16, 12, 6, 0.05) 60%, transparent 100%);
+  filter: blur(20px) saturate(0.7);
+  mix-blend-mode: multiply;
+  opacity: 0.7;
+}
+
+.grease-smudge-streak {
+  position: absolute;
+  pointer-events: none;
+  background: linear-gradient(145deg, rgba(12, 8, 4, 0.42) 0%, rgba(12, 8, 4, 0.16) 45%, transparent 100%);
+  filter: blur(12px) contrast(1.15);
+  mix-blend-mode: multiply;
+  transform: rotate(-12deg);
+  opacity: 0.6;
+}
+
+.grease-smudge-light {
+  position: absolute;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(15, 12, 10, 0.12) 0%, rgba(15, 12, 10, 0.03) 50%, transparent 100%);
+  filter: blur(28px);
+  mix-blend-mode: multiply;
+  opacity: 0.55;
+}
+
+/* Concrete cracking overlays */
+.cracked-concrete-text {
+  filter: url(#cracked-distortion);
+}
+
+/* Strict zero radius overrides */
+* {
+  border-radius: 0px !important;
+}
